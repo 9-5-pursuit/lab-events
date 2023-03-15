@@ -10,34 +10,37 @@ let c = document.querySelectorAll('#palette .color')
 let col = document.querySelector('#current-color')
 
 for (let s of c) {
-  s.addEventListener('click', (event)=>{
-    console.log(event.target.style.backgroundColor);
+  s.addEventListener('click', (event) => {
+
     col.style.backgroundColor = event.target.style.backgroundColor
 
-  const maint = document.querySelectorAll("main div.cell");
+    const maint = document.querySelectorAll("main div.cell");
 
-  for (let c of maint) {
-    c.addEventListener('click', () => {
-      c.style.backgroundColor = col.style.backgroundColor
+    for (let c of maint) {
+      c.addEventListener('click', () => {
+        c.style.backgroundColor = col.style.backgroundColor
 
-      let newb = document.createElement('button')
+        let newb = document.createElement('button')
+        newb.innerHTML = 'change grid color'
+        newb.display = 'block'
 
-      newb.style.display = 'inline-block'
-      newb.value = 'change grid color'
+        let n = document.querySelector('header')
 
-      let n = document.querySelector('header')
+        n.appendChild(newb)
 
-      n.append(newb)
+        let buttona = document.querySelector('header button')
 
-      let buttona = document.querySelector('header button')
+        buttona.addEventListener('click', () => {
 
-      buttona.addEventListener('click', () => {
-        
+          const maina = document.querySelectorAll("main div.cell");
+
+          for (let z of maina) {
+            let colz = document.querySelector('#current-color')
+            z.style.backgroundColor = colz.style.backgroundColor
+          }
+        })
       })
-
-
-    })
-  }
+    }
   })
 }
 
