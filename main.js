@@ -30,8 +30,3 @@ emptyBox.forEach((box) => {
     box.style.background = currentColor.style.background;
   });
 });
-
-//     const target2 = event.target
-
-//     target2.style.backgroundColor
-//   });
