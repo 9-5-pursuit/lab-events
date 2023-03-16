@@ -7,3 +7,20 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
+
+const palette = document.querySelector("#palette");
+const divList = palette.querySelectorAll("div");
+for (let color of divList) {
+  color.addEventListener("click", () => {
+    currentColor = document.querySelector("#current-color");
+    currentColor.style.background = color.style.background;
+  });
+}
+
+const cells = document.querySelectorAll("#canvas .cell");
+for (let cell of cells) {
+  cell.addEventListener("click", () => {
+    currentColor = document.querySelector("#current-color");
+    cell.style.background = currentColor.style.background;
+  });
+}
