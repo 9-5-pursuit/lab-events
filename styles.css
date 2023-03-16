@@ -67,3 +67,9 @@ header h1 {
   height: 50px;
   width: 50px;
 }
+
+
+.button {
+  display: grid;
+  margin: 0 auto;
+}
