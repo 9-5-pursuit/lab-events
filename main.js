@@ -6,11 +6,19 @@ for (let i = 0; i < 100; i++) {
   main.append(div);
 }
 
+let hform = document.querySelector('header h1')
+hform.style.margin = '0'
+hform.style.paddingTop = '25px'
+hform.style.paddingBottom = '25px'
+
 let newb = document.createElement('button')
 newb.innerHTML = 'change grid color'
 newb.hidden = 'true'
 
 let n = document.querySelector('header')
+n.style.display = 'flex'
+n.style.alignItems = 'center'
+n.style.justifyContent = 'space-between'
 
 n.appendChild(newb)
 
@@ -29,7 +37,9 @@ for (let s of c) {
         c.style.backgroundColor = col.style.backgroundColor
 
         let buttona = document.querySelector('header button')
-        buttona.style.display = 'block'
+        buttona.style.display = 'inline-block'
+        buttona.style.margin = '0 auto'
+        buttona.style.marginLeft = '5%'
         buttona.addEventListener('click', () => {
           const maina = document.querySelectorAll("main div.cell");
           let colz = document.querySelector('#current-color')
