@@ -23,5 +23,5 @@ for (let cell of main.children) {
 }
 
 // const colorAll = document.createElement("button");
-// colorAll.append(palette);
+// colorAll.after(currentColor);
 // colorAll.textContent = "Paint all boxes with my current color";
