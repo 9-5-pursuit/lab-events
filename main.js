@@ -7,3 +7,21 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
+//1st step: store it in a variable
+const palette = document.querySelectorAll("#palette div.color");
+const currentColor = document.querySelector("#current-color");
+
+for (let color of palette) {
+  color.addEventListener("click", () => {
+    const colorPicked = color.style.background;
+    currentColor.style.backgroundColor = colorPicked;
+  });
+}
+
+const paintCells = document.querySelectorAll("main div.cell");
+for (let cell of paintCells) {
+  cell.addEventListener("click", () => {
+    const currentColorBackground = currentColor.style.backgroundColor;
+    cell.style.backgroundColor = currentColorBackground;
+  });
+}
