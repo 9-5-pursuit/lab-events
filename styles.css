@@ -49,6 +49,7 @@ header h1 {
   height: 50px;
   margin: 25px auto;
   width: 50px;
+  
 }
 
 #palette {
@@ -66,4 +67,11 @@ header h1 {
   margin: 10px;
   height: 50px;
   width: 50px;
+}
+
+footer{
+  border-radius: 2px solid black;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
 }
