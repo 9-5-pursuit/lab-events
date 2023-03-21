@@ -7,3 +7,11 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
+let palette = document.querySelectorAll(".color");
+let current = document.querySelector("#current-color");
+
+for (let color of palette) {
+  color.addEventListener("click", () => {
+    current.style.backgroundColor = color.style.backgroundColor;
+  });
+} //changes color of current color box on click
