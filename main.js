@@ -15,3 +15,13 @@ for (let color of palette) {
     current.style.backgroundColor = color.style.backgroundColor;
   });
 } //changes color of current color box on click
+
+let canvasCells = document.querySelectorAll(".cell");
+
+for (let cell of canvasCells) {
+  cell.addEventListener("click", () => {
+    cell.style.background = current.style.backgroundColor;
+  });
+} //changes color of cell on click
+
+// make a save  button that saves the current cell state
